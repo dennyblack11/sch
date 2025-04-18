@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* --color-primary: #2563eb;
+  --color-secondary: #facc15;
+  --color-accent: #10b981; */
+}
+
+.dark {
+  --bg-color: #fff;
+  --text-color: #ffffff;
+}
+
+/* EL-Leonora Theme */
+.school-el-leonora {
+  --color-primary: #064e3b;
+  --color-secondary: #fbbf24;
+  --color-accent: #10b981;
+}
+
+/* AlphaBeta Theme */
+.school-alphabeta {
+  --color-primary: #7c3aed;
+  --color-secondary: #f472b6;
+  --color-accent: #f87171;
+}
+
+/* Page Transitions */
+.smooth {
+  animation: fadeSlideIn 0.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Page Transitions */
+
+/* Toggle Transitions */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animate-slideInRight {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+/* Toggle Transitions */
+
+@keyframes border-rotate {
+  0% {
+    border-color: #3b82f6;
+  }
+  25% {
+    border-color: #06b6d4;
+  }
+  50% {
+    border-color: #10b981;
+  }
+  75% {
+    border-color: #f59e0b;
+  }
+  100% {
+    border-color: #3b82f6;
+  }
+}
+
+.animate-border-rotate {
+  animation: border-rotate 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.loading-input {
+  background: linear-gradient(90deg, #fff 25%, #fff 50%, #fff 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.custom-table {
+  background-color: white !important;
+}
